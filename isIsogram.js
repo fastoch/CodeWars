@@ -16,25 +16,25 @@ function isIsogram(str) {
 
 // Refactoring
 function isIsogram(str){ 
-  return !/([a-z]).*\1/i.test(str)
+  return !/([a-z])[a-z]*\1/i.test(str)
 }
 
 // Refactoring explanation
 
-    /* The above regex is testing the string to check if it has repeating letters.
-    The ! means "return true if the given string does not match the following regex".
-    So, our regex must look for repeating letters.
+    /* We are testing the string against the above regex.
+    This test will return a boolean and we use ! to return the opposite of this test result.
+    Our regex must match a string containing consecutive or non-consecutive repeating letters.
 
     The regex itself is contained between the first slash and the last one, which gives : ([a-z]).*\1
 
     The parentheses define a capturing group.
-    The period signifies any character at all - whether a letter, number, space, symbol etc.
+    [a-z] matches any letter
     The n* quantifier matches any string that contains zero or more occurrences of n. 
-    In our case, n is the period (any character).
+    In our case, n is any letter.
 
-    So far, we look for an expression that contains a letter, followed by zero or more occurrences of any character.
+    So far, we look for an expression that contains a letter, followed by zero or more occurrences of any letter.
 
     The next part is \1 - A backslash followed by a number is used to point to the capture group defined earlier ([a-z]). 
-    Essentially, the engine treats the first matched letter as a variable, and looks for the exact same letter again.
+    Essentially, the engine treats the first matched letter as a variable, and looks for the exact same letter again, adjacent or not.
 
     Finally, the i flag indicates that case should be ignored while attempting a match in a string. */
