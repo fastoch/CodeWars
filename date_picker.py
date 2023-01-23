@@ -12,3 +12,6 @@ print(list)
 
 # refactored
 print(list(range(a,b)))
+
+# to include the second input number
+print(list(range(a,b+1)))
