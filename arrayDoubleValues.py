@@ -8,7 +8,12 @@ For example:
 
 """
 
+# my code
 def maps(a):
     for i in range(0, len(a)):
         a[i] *= 2
     return a
+
+# alternative
+def maps(a):
+    return [2 * x for x in a]
