@@ -9,6 +9,7 @@ Examples(Input => Output):
 
 """
 
+# my code
 def digitize(n):
     list = []
     string = str(n)
@@ -17,3 +18,7 @@ def digitize(n):
         list[i] = int(list[i])
     list.reverse()
     return list
+
+  # alternative
+  def digitize(n):
+    return [int(x) for x in reversed(str(n))]
