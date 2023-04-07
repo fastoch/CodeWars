@@ -10,4 +10,10 @@ Examples(Input => Output):
 """
 
 def digitize(n):
-    return
+    list = []
+    string = str(n)
+    for i in range(0, len(string)):
+        list.append(string[i])
+        list[i] = int(list[i])
+    list.reverse()
+    return list
