@@ -9,4 +9,6 @@ For example:
 """
 
 def maps(a):
-    pass
+    for i in range(0, len(a)):
+        a[i] *= 2
+    return a
