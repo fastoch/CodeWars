@@ -17,5 +17,6 @@ def spin_words(sentence):
     new_sentence = ' '.join(new_liste)  # makes a new sentence with elements of my new list
     return new_sentence
   
-  # alternative
-  
+# alternative
+def spin_words(sentence):
+    return " ".join([x[::-1] if len(x) >= 5 else x for x in sentence.split()])      # split() == split(" "), default separator is any whitespace
